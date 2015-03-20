@@ -5,7 +5,7 @@
 $bg-color: #efefef;
 $text-color: #4f4f4f;
 $secondy-text-color: #777;
-$highlight-text-color: white;
+$highlight-text-color: #fff;
 $button-color: #6cdcac;
 $border-color: #777;
 
@@ -16,8 +16,13 @@ body {
   background-color: $bg-color;
 }
 
+.container {
+  max-width: 120em;
+  margin: 0 auto;
+}
+
 .hero {
-  background: url('images/find-an-agent-hero.png');
+  background: url('../images/find-an-agent-hero.png');
   background-size: cover;
   color: $highlight-text-color;
   max-width: 100em;
@@ -50,7 +55,7 @@ body {
 
   h1 {
     font-size: 4em;
-    padding: 1em 0 .5em 0;
+    padding: 4em 0 .5em 0;
     font-weight: bold;
   }
 
@@ -58,28 +63,28 @@ body {
     font-size: 2em;
     color: #ccc;
   }
-}
 
-form {
-  padding: 2em 0 4em 0;
+  form {
+    padding: .5em 0 10em 0;
 
-  input[type="text"] {
-    padding: 1em;
-    border: 0;
-    width: 18em;
-    border-radius: 2px 0 0 2px;
-    background: $bg-color;
-    opacity: .3;
-  }
+    input[type="text"] {
+      padding: 1em;
+      border: 0;
+      width: 18em;
+      border-radius: 2px 0 0 2px;
+      background: $bg-color;
+      opacity: .3;
+    }
 
-  input[type="button"] {
-    color: $highlight-text-color;
-    padding: 1em;
-    border: 0;
-    width: 6em;
-    border-radius: 0 2px 2px 0;
-    background-color: $button-color;
-    text-transform: uppercase;
+    input[type="button"] {
+      color: $highlight-text-color;
+      padding: 1em;
+      border: 0;
+      width: 6em;
+      border-radius: 0 2px 2px 0;
+      background-color: $button-color;
+      text-transform: uppercase;
+    }
   }
 }
 
@@ -152,7 +157,7 @@ form {
     }
 
     &:last-child:before {
-        display: none;
+      display: none;
     }
   }
 
@@ -189,5 +194,25 @@ form {
 
   p {
     color: $secondy-text-color;
+    line-height: 1.4;
+    font-weight: lighter;
+    padding: 0 4em;
+    margin-bottom: 4em;
+  }
+  @include clearfix;
+}
+
+footer {
+  padding: 1em 0;
+  background-color: #333;
+
+  p {
+    color: #fff;
+    padding: .5em 0;
+
+    a {
+      color: #09aa74;
+      text-decoration: none;
+    }
   }
 }
